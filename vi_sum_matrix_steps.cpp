@@ -15,39 +15,39 @@ int main()                                                                  //1
 
 
     cout << "Enter the elements of array A(row-wise):\n";                   //1
-    for (i = 0; i < m; i++)                                                 //1 + (N+1) + N
+    for (i = 0; i < m; i++)                                                 //1 + (M+1) + M
     {
-        for (j = 0; j < n; j++)                                             //N + N(N+1) + N*N
+        for (j = 0; j < n; j++)                                             //M + M(N+1) + M*N
         {
-            cin >> a[i][j];                                                 //N*N
+            cin >> a[i][j];                                                 //M*N
         }
     }
 
     cout << "Enter the elements of array B(row-wise):\n";                   //1
-    for (i = 0; i < m; i++)                                                 //1 + (N+1) + N
+    for (i = 0; i < m; i++)                                                 //1 + (M+1) + M
     {
-        for (j = 0; j < n; j++)                                             //N + N(N+1) + N*N
+        for (j = 0; j < n; j++)                                             //M + M(N+1) + M*N
         {
-            cin >> b[i][j];                                                 //N*N
+            cin >> b[i][j];                                                 //M*N
         }
     }
 
     //Adding the matricies
-    for (i = 0; i < m; i++)                                                 //1 + (N+1) + N
+    for (i = 0; i < m; i++)                                                 //1 + (M+1) + M
     {
-        for (j = 0; j < n; j++)                                             //N + N(N+1) + N*N
+        for (j = 0; j < n; j++)                                             //M + M(N+1) + M*N
         {
-            c[i][j] = a[i][j] + b[i][j];                                    //N*N
+            c[i][j] = a[i][j] + b[i][j];                                    //M*N
         }
     }
 
     cout << "The sum matrix is:\n";                                         //1
-    for (i = 0; i < m; i++)                                                 //1 + (N+1) + N
+    for (i = 0; i < m; i++)                                                 //1 + (M+1) + M
     {
-        for (j = 0; j < n; j++)                                             //N + N(N+1) + N*N
+        for (j = 0; j < n; j++)                                             //M + M(N+1) + M*N
         {
-            cout << c[i][j] << "  ";                                         //N*N
+            cout << c[i][j] << "  ";                                        //M*N
         }
-        cout << endl;                                                       //N
+        cout << endl;                                                       //M
     }
-}                                                                           //Total steps: 12(N*N) + 17N + 22
+}                                                                           //Total steps: 12(M*N) + 17M + 22
