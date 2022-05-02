@@ -15,7 +15,7 @@ void printArray(int a[], int n)
 void merge(int a[], int left, int mid, int right)
 {
     //Creating a temporary array b to store the elements in sorted order.
-    int i = left, j = mid + 1, k = left, b[right + 1];
+    int i = left, j = mid + 1, k = left, b[50];
     while (i <= mid || j <= right)
     {
         if (i > mid)                //if the elements of left sub-array have exhausted, we enter all elements of right sub-array.
